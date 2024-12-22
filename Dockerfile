@@ -1,7 +1,9 @@
 FROM golang:1.23.2 AS builder
 
 WORKDIR /app
-
+ENV CGO_ENABLED=0
+ENV GOOS=linux
+ENV GOARCH=amd64
 COPY go.mod go.sum ./
 
 RUN go mod tidy
