@@ -29,7 +29,7 @@ func sendMessage(bot *telebot.Bot, targetDate time.Time, chatID int64) {
 	bot.Send(&telebot.Chat{ID: chatID}, message)
 }
 func sendMessage(bot *telebot.Bot, sokrDate time.Time, chatID int64) {
-	daysSince := calculateDaysSince(sokrDate)
+	daysSince := calculateDaysSinceSokr(sokrDate)
 	message := fmt.Sprintf("Дилару не сокращают %d дней", daysSince)
 
 	bot.Send(&telebot.Chat{ID: chatID}, message)
