@@ -24,7 +24,7 @@ func calculateDaysSinceSokr(sokrDate time.Time)int {
 
 func sendMessage(bot *telebot.Bot, targetDate time.Time, chatID int64) {
 	daysSince := calculateDaysSince(targetDate)
-	message := fmt.Sprintf("Маша не выходит замужем %d дней", daysSince)
+	message := fmt.Sprintf("Маша не выходит замуж %d дней", daysSince)
 
 	bot.Send(&telebot.Chat{ID: chatID}, message)
 }
